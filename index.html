@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Image Search</title>
-  <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
-  <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-CR7N1gwd.js">
-  <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-Dh4R7V6p.css">
-</head>
-<body>
-  <div class="container">
-    <form class="gallery-form">
-      <input type="text" name="query" placeholder="Search for images..." />
-      <button type="submit">Search</button>
-    </form>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla App Template</title>
+    <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-5ObWk2rO.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-DumFYO8Z.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-iU8KVocr.css">
+  </head>
+  <body>
+    <section>
+      <div class="wrapper">
+        <form class="gallery-form">
+          <label for="query-for-search">
+            <input
+              type="text"
+              class="input-for-gallery"
+              name="query-for-search"
+              id="query-for-search"
+              placeholder="Search images..."
+            />
+          </label>
+          <button type="submit" class="button">Search</button>
+        </form>
+        <div class="loader hidden"></div> 
+        <ul class="gallery-list"></ul>
+        <button class="load-more hidden">Load more</button>
+      </div>
+    </section>
 
-    <div class="gallery-list"></div>
-    
-    <div class="loader hidden"></div>
-
-    <button class="load-more hidden">Load more</button>
-  </div>
-
-</body>
+  </body>
 </html>
