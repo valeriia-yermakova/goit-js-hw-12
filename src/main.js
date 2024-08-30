@@ -58,6 +58,16 @@ async function fetchImages(query, page) {
       lightbox.refresh();
     }
 
+    if (page > 1) {
+      const { height: cardHeight } = galleryList
+        .firstElementChild.getBoundingClientRect();
+
+      window.scrollBy({
+        top: cardHeight * 2,
+        behavior: 'smooth',
+      });
+    }
+
     if (data.hits.length < 15 || page * 15 >= data.totalHits) {
       loadMoreButton.classList.add('hidden');
       iziToast.info({
